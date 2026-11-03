@@ -16,78 +16,16 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- estilos propios: después de Bootstrap para que lo sobrescriban -->
+    <link href="style.css" rel="stylesheet">
+
     <!-- jScript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fff;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        .navbar-brand {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .navbar {
-            background-color: #2E7D32;
-        }
-
-        .navbar .nav-link:hover,
-        .navbar-brand:hover {
-            color: #81C784;
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: #81C784;
-            color: #1B5E20;
-        }
-
-        .progress-bar {
-            background-color: #2E7D32;
-        }
-
-        .progress-bar.bg-verde {
-            background-color: #81C784;
-            color: #1B5E20;
-        }
-
-        .card {
-            border: 1px solid darkgray;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-        }
-
-        .section-title {
-            color: #2E7D32;
-        }
-
-        .section-title i {
-            color: #81C784;
-        }
-
-        footer {
-            background-color: #1B5E20;
-            color: white;
-        }
-
-        footer span {
-            color: #81C784;
-        }
-    </style>
 </head>
-
 <body>
 
     <!--menú -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-clinica sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-heart-pulse"></i> Clínica Vet
@@ -126,7 +64,7 @@
 
         <!-- cuidados acordeon-->
         <section class="mb-5">
-            <h2 class="mb-3 section-title">
+            <h2 class="mb-3 section-title text-primary">
                 <i class="bi bi-heart-fill"></i> Cuidados básicos
             </h2>
 
@@ -201,7 +139,7 @@
 
         <!--tarjetas -->
         <section class="mb-5">
-            <h2 class="mb-3 section-title">
+            <h2 class="mb-3 section-title text-primary">
                 <i class="bi bi-lightbulb-fill"></i> Consejos rápidos
             </h2>
 
@@ -253,7 +191,7 @@
 
         <!--barras cuidado -->
         <section class="mb-5">
-            <h2 class="mb-3 section-title">
+            <h2 class="mb-3 section-title text-primary">
                 <i class="bi bi-bar-chart-fill"></i> Cuidados importantes
             </h2>
 
@@ -265,7 +203,7 @@
                             <h5 class="card-title">Vacunas</h5>
 
                             <div class="progress mb-2" style="height: 22px;">
-                                <div class="progress-bar" style="width: 95%;">
+                                <div class="progress-bar bg-primary" style="width: 95%;">
                                     Muy importante
                                 </div>
                             </div>
@@ -281,7 +219,7 @@
                             <h5 class="card-title">Ejercicio</h5>
 
                             <div class="progress mb-2" style="height: 22px;">
-                                <div class="progress-bar bg-verde" style="width: 80%;">
+                                <div class="progress-bar bg-success text-dark" style="width: 80%;">
                                     Importante
                                 </div>
                             </div>
@@ -297,7 +235,7 @@
                             <h5 class="card-title">Revisiones</h5>
 
                             <div class="progress mb-2" style="height: 22px;">
-                                <div class="progress-bar" style="width: 90%;">
+                                <div class="progress-bar bg-primary" style="width: 90%;">
                                     Muy recomendable
                                 </div>
                             </div>
@@ -313,7 +251,7 @@
                             <h5 class="card-title">Higiene dental</h5>
 
                             <div class="progress mb-2" style="height: 22px;">
-                                <div class="progress-bar bg-verde" style="width: 75%;">
+                                <div class="progress-bar bg-success text-dark" style="width: 75%;">
                                     Importante
                                 </div>
                             </div>
@@ -329,7 +267,7 @@
     </main>
 
     <!--pie-->
-    <footer class="py-4 mt-5">
+    <footer class="pie text-white py-4 mt-5">
         <div class="container text-center">
             <p class="mb-1">© 2026 Clínica Veterinaria</p>
             <p class="mb-0">Hecho por <span class="fw-semibold">Pablo Marín Bericua</span></p>
