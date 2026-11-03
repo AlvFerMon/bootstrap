@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Servicios y tarifas</title>
+
+    <!-- Bootstrap 5.3.8 (misma versión que el resto de páginas) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Fuentes del grupo: Montserrat (títulos) e Inter (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos propios. Cuando exista el CSS común del grupo, mover esto allí -->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <header class="cabecera text-center text-white rounded p-4 p-md-5 mt-3">
+        <h1 class="display-5 fw-bold">Servicios y tarifas</h1>
+        <p class="lead mb-2">Clínica veterinaria Carlitos &amp; Snoopy</p>
+        <span class="badge rounded-pill text-bg-light text-success fs-6">
+          <i class="bi bi-clock-history"></i> Urgencias 24h
+        </span>
+      </header>
+      <nav
+        class="navbar navbar-expand-lg navbar-clinica rounded mt-4"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><i class="bi bi-heart-pulse"></i> Clínica</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <!-- Cambiar "#" por el archivo de Álvaro cuando lo suba -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Página Álvaro</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="servicios.html"
+                  >Servicios y tarifas</a
+                >
+              </li>
+              <!-- Cambiar "#" por el archivo de Pablo cuando lo suba -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Página Pablo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="informacionycontacto.html"
+                  >Información y contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row g-4 mb-4">
+        <section class="col-12 col-lg-8">
+          <h2 class="h3 mb-3">Nuestras tarifas</h2>
+
+          <div class="table-responsive">
+            <table
+              class="table table-striped table-hover align-middle tabla-tarifas"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Servicio</th>
+                  <!-- Descripción: solo en escritorio -->
+                  <th scope="col" class="d-none d-lg-table-cell">
+                    Descripción
+                  </th>
+                  <!-- Duración: desde tablet -->
+                  <th scope="col" class="d-none d-md-table-cell">Duración</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col" class="text-center">Info</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Consulta general
+                    <span class="badge text-bg-warning">Más pedido</span>
+                  </td>
+                  <td class="d-none d-lg-table-cell">
+                    Revisión completa del estado de salud
+                  </td>
+                  <td class="d-none d-md-table-cell">30 min</td>
+                  <td>
+                    <span data-bs-toggle="tooltip" data-bs-title="IVA incluido"
+                      >35 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Consulta general"
+                      data-detalle="Exploración física completa: peso, temperatura, corazón, piel, ojos y oídos. Incluye recomendaciones de alimentación y cuidados."
+                      data-duracion="30 minutos"
+                      data-precio="35 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Vacunación</td>
+                  <td class="d-none d-lg-table-cell">
+                    Vacunas obligatorias y recomendadas
+                  </td>
+                  <td class="d-none d-md-table-cell">15 min</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Según tipo de vacuna"
+                      >25 – 45 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Vacunación"
+                      data-detalle="Aplicación de la vacuna (rabia, polivalente, leucemia felina…) y registro en la cartilla sanitaria."
+                      data-duracion="15 minutos"
+                      data-precio="25 – 45 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Desparasitación</td>
+                  <td class="d-none d-lg-table-cell">Interna y externa</td>
+                  <td class="d-none d-md-table-cell">15 min</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Producto incluido"
+                      >20 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Desparasitación"
+                      data-detalle="Tratamiento contra parásitos internos (lombrices) y externos (pulgas y garrapatas), adaptado al peso de la mascota."
+                      data-duracion="15 minutos"
+                      data-precio="20 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Análisis de sangre
+                    <span class="badge text-bg-success">Nuevo</span>
+                  </td>
+                  <td class="d-none d-lg-table-cell">
+                    Hemograma y bioquímica en clínica
+                  </td>
+                  <td class="d-none d-md-table-cell">20 min</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Resultados en el día"
+                      >55 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Análisis de sangre"
+                      data-detalle="Extracción y análisis en nuestro propio laboratorio. Detecta anemias, infecciones y problemas de hígado o riñón."
+                      data-duracion="20 minutos (resultados en el día)"
+                      data-precio="55 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Radiografía</td>
+                  <td class="d-none d-lg-table-cell">Radiología digital</td>
+                  <td class="d-none d-md-table-cell">30 min</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Precio por proyección"
+                      >60 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Radiografía"
+                      data-detalle="Radiografía digital para estudiar huesos, tórax o abdomen. El veterinario te explica el resultado en la misma visita."
+                      data-duracion="30 minutos"
+                      data-precio="60 € por proyección"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Esterilización</td>
+                  <td class="d-none d-lg-table-cell">
+                    Cirugía con anestesia general
+                  </td>
+                  <td class="d-none d-md-table-cell">1 día</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Precio orientativo según peso"
+                      >150 – 300 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Esterilización"
+                      data-detalle="Intervención quirúrgica con preanestesia, anestesia general, monitorización y revisión posterior a la operación."
+                      data-duracion="1 día (ingreso y alta en el mismo día)"
+                      data-precio="150 – 300 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Peluquería</td>
+                  <td class="d-none d-lg-table-cell">Baño, corte y uñas</td>
+                  <td class="d-none d-md-table-cell">1 h</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Según tamaño del animal"
+                      >30 – 50 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Peluquería"
+                      data-detalle="Baño con champú específico, secado, corte de pelo y de uñas y limpieza de oídos."
+                      data-duracion="1 hora aproximadamente"
+                      data-precio="30 – 50 €"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Urgencias <span class="badge text-bg-danger">24h</span>
+                  </td>
+                  <td class="d-none d-lg-table-cell">
+                    Atención inmediata a cualquier hora
+                  </td>
+                  <td class="d-none d-md-table-cell">Variable</td>
+                  <td>
+                    <span
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Precio base, sin pruebas"
+                      >70 €</span
+                    >
+                  </td>
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-sm btn-outline-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalServicio"
+                      data-servicio="Urgencias"
+                      data-detalle="Atención veterinaria inmediata los 365 días del año. Las pruebas y tratamientos se cobran aparte."
+                      data-duracion="Según el caso"
+                      data-precio="70 € (precio base)"
+                    >
+                      <i class="bi bi-info-circle"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small text-muted">
+            <i class="bi bi-info-circle"></i> Precios con IVA incluido. Pasa el
+            ratón por el precio para ver más detalles.
+          </p>
+        </section>
+
+        <!-- Columna derecha: solo visible en escritorio (lg) -->
+        <aside class="d-none d-lg-block col-lg-4">
+          <h2 class="h4 mb-3">Horario y contacto</h2>
+          <!-- LIST GROUP (opcional 4) -->
+          <ul class="list-group">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <span><i class="bi bi-calendar-week"></i> Lunes a viernes</span>
+              <span class="badge text-bg-success rounded-pill"
+                >9:00 – 21:00</span
+              >
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <span><i class="bi bi-calendar-event"></i> Sábados</span>
+              <span class="badge text-bg-success rounded-pill"
+                >10:00 – 14:00</span
+              >
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <span><i class="bi bi-hospital"></i> Urgencias</span>
+              <span class="badge text-bg-danger rounded-pill">24 h</span>
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-telephone"></i> 954 000 000
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-envelope"></i> info@carlitosysnoopy.es
+            </li>
+          </ul>
+          <a
+            href="informacionycontacto.html"
+            class="btn btn-primary w-100 mt-3"
+          >
+            <i class="bi bi-calendar-plus"></i> Pedir cita
+          </a>
+        </aside>
+      </div>
+    </div>
+
+    <!-- 6. MODAL (opcional 5): se rellena con los datos del botón pulsado -->
+    <div
+      class="modal fade"
+      id="modalServicio"
+      tabindex="-1"
+      aria-labelledby="modalServicioTitulo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="modalServicioTitulo">Servicio</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalServicioDetalle"></p>
+            <p class="mb-1">
+              <i class="bi bi-hourglass-split"></i> <strong>Duración:</strong>
+              <span id="modalServicioDuracion"></span>
+            </p>
+            <p class="mb-0">
+              <i class="bi bi-tag"></i> <strong>Precio:</strong>
+              <span id="modalServicioPrecio"></span>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <a href="informacionycontacto.html" class="btn btn-primary"
+              >Pedir cita</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="pie text-white text-center py-3 mt-4">
+      <p class="mb-0 small">Diseño de la página: Marco Calero Gallego</p>
+    </footer>
+
+    <!-- 9. JS DE BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Activar los tooltips (opcional 3)
+      document
+        .querySelectorAll('[data-bs-toggle="tooltip"]')
+        .forEach((el) => new bootstrap.Tooltip(el));
+
+      // Rellenar el modal con los datos del servicio pulsado
+      document
+        .getElementById("modalServicio")
+        .addEventListener("show.bs.modal", (evento) => {
+          const boton = evento.relatedTarget;
+          document.getElementById("modalServicioTitulo").textContent =
+            boton.dataset.servicio;
+          document.getElementById("modalServicioDetalle").textContent =
+            boton.dataset.detalle;
+          document.getElementById("modalServicioDuracion").textContent =
+            boton.dataset.duracion;
+          document.getElementById("modalServicioPrecio").textContent =
+            boton.dataset.precio;
+        });
+    </script>
+  </body>
+</html>

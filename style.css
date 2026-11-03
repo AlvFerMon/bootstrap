@@ -1,0 +1,53 @@
+:root {
+  --color-primario: #2e7d32;
+  --color-secundario: #81c784;
+  --bs-primary: #2e7d32;
+  --bs-primary-rgb: 46, 125, 50;
+  --bs-success: #81c784;
+  --bs-success-rgb: 129, 199, 132;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+}
+
+.cabecera {
+  background-color: var(--color-primario);
+}
+
+.navbar-clinica {
+  background-color: var(--color-primario) !important;
+}
+
+.tabla-tarifas thead th {
+  background-color: var(--color-secundario);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--color-primario);
+  --bs-btn-border-color: var(--color-primario);
+  --bs-btn-hover-bg: #256628;
+  --bs-btn-hover-border-color: #256628;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--color-primario);
+  --bs-btn-border-color: var(--color-primario);
+  --bs-btn-hover-bg: var(--color-primario);
+  --bs-btn-hover-border-color: var(--color-primario);
+}
+
+.pie {
+  background-color: var(--color-primario);
+}
