@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados | Clínica Veterinaria</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- jScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            background-color: #2E7D32;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar-brand:hover {
+            color: #81C784;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #81C784;
+            color: #1B5E20;
+        }
+
+        .progress-bar {
+            background-color: #2E7D32;
+        }
+
+        .progress-bar.bg-verde {
+            background-color: #81C784;
+            color: #1B5E20;
+        }
+
+        .card {
+            border: 1px solid darkgray;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            color: #2E7D32;
+        }
+
+        .section-title i {
+            color: #81C784;
+        }
+
+        footer {
+            background-color: #1B5E20;
+            color: white;
+        }
+
+        footer span {
+            color: #81C784;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--menú -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-heart-pulse"></i> Clínica Vet
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Alvaro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Marcos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacionycontacto">Josemi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cuidados.html">Pablo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- titulo-->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold mb-2">Cuidados de tu mascota</h1>
+            <p class="text-muted">Algunos consejos para mantener a tu mascota sana y feliz.</p>
+        </div>
+
+        <!-- cuidados acordeon-->
+        <section class="mb-5">
+            <h2 class="mb-3 section-title">
+                <i class="bi bi-heart-fill"></i> Cuidados básicos
+            </h2>
+
+            <div class="accordion" id="acordeonCuidados">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cuidado1">
+                            Alimentación
+                        </button>
+                    </h2>
+
+                    <div id="cuidado1" class="accordion-collapse collapse show" data-bs-parent="#acordeonCuidados">
+                        <div class="accordion-body">
+                            Es importante darle una alimentación adecuada a su edad y tamaño. También hay que evitar
+                            darle alimentos que puedan ser perjudiciales para su salud.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cuidado2">
+                            Higiene y baño
+                        </button>
+                    </h2>
+
+                    <div id="cuidado2" class="accordion-collapse collapse" data-bs-parent="#acordeonCuidados">
+                        <div class="accordion-body">
+                            Los perros necesitan baños de vez en cuando, dependiendo de su raza y actividad. Los gatos
+                            suelen limpiarse solos, aunque también es importante revisar sus orejas y dientes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cuidado3">
+                            Ejercicio
+                        </button>
+                    </h2>
+
+                    <div id="cuidado3" class="accordion-collapse collapse" data-bs-parent="#acordeonCuidados">
+                        <div class="accordion-body">
+                            Los perros necesitan pasear y hacer ejercicio diariamente. En el caso de los gatos, es
+                            recomendable dedicar un rato al día a jugar con ellos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cuidado4">
+                            Vacunas y desparasitación
+                        </button>
+                    </h2>
+
+                    <div id="cuidado4" class="accordion-collapse collapse" data-bs-parent="#acordeonCuidados">
+                        <div class="accordion-body">
+                            Hay que mantener al día las vacunas y los tratamientos antiparasitarios. El veterinario
+                            puede indicar cuándo es necesario realizar cada tratamiento.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--tarjetas -->
+        <section class="mb-5">
+            <h2 class="mb-3 section-title">
+                <i class="bi bi-lightbulb-fill"></i> Consejos rápidos
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://hips.hearstapps.com/clv.h-cdn.co/assets/16/18/gettyimages-586890581.jpg?crop=0.668xw:1.00xh;0.219xw,0"
+                            class="card-img-top" alt="Perro">
+                        <div class="card-body">
+                            <h5 class="card-title">Revisiones</h5>
+                            <p class="card-text">
+                                Aunque nuestra mascota parezca estar bien, es recomendable llevarla al veterinario para
+                                realizar revisiones periódicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Grumpy_Cat_%2814556024763%29_%28cropped%29.jpg/960px-Grumpy_Cat_%2814556024763%29_%28cropped%29.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+                            class="card-img-top" alt="Gato">
+                        <div class="card-body">
+                            <h5 class="card-title">Control del peso</h5>
+                            <p class="card-text">
+                                Una alimentación equilibrada y el ejercicio ayudan a evitar problemas de sobrepeso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="https://humaneloudoun.org/wp-content/uploads/2025/02/343337-1600x1066-best-dog-breeds-cats-1405334155.jpg"
+                            class="card-img-top" alt="Mascotas">
+                        <div class="card-body">
+                            <h5 class="card-title">Socialización</h5>
+                            <p class="card-text">
+                                Especialmente cuando son cachorros, es importante que se acostumbren a relacionarse con
+                                otros animales y personas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--barras cuidado -->
+        <section class="mb-5">
+            <h2 class="mb-3 section-title">
+                <i class="bi bi-bar-chart-fill"></i> Cuidados importantes
+            </h2>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Vacunas</h5>
+
+                            <div class="progress mb-2" style="height: 22px;">
+                                <div class="progress-bar" style="width: 95%;">
+                                    Muy importante
+                                </div>
+                            </div>
+
+                            <small class="text-muted">Mantener las vacunas al día.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio</h5>
+
+                            <div class="progress mb-2" style="height: 22px;">
+                                <div class="progress-bar bg-verde" style="width: 80%;">
+                                    Importante
+                                </div>
+                            </div>
+
+                            <small class="text-muted">Ayuda a mantener una buena salud.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Revisiones</h5>
+
+                            <div class="progress mb-2" style="height: 22px;">
+                                <div class="progress-bar" style="width: 90%;">
+                                    Muy recomendable
+                                </div>
+                            </div>
+
+                            <small class="text-muted">Permiten detectar problemas a tiempo.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Higiene dental</h5>
+
+                            <div class="progress mb-2" style="height: 22px;">
+                                <div class="progress-bar bg-verde" style="width: 75%;">
+                                    Importante
+                                </div>
+                            </div>
+
+                            <small class="text-muted">También hay que cuidar sus dientes.</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--pie-->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">© 2026 Clínica Veterinaria</p>
+            <p class="mb-0">Hecho por <span class="fw-semibold">Pablo Marín Bericua</span></p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
