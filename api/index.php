@@ -1,4 +1,8 @@
 <?php
+// En producción los avisos de PHP van al log de Vercel, no a la página.
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+
 // Punto de entrada para Vercel: todas las peticiones llegan aquí (ver vercel.json)
 // y este archivo ejecuta la página PHP correspondiente de la carpeta www/.
 // En local, con Docker, no se usa: Apache sirve www/ directamente.
@@ -24,7 +28,7 @@ $relativa = $archivo !== false ? substr($archivo, strlen($base) + 1) : '';
 $permitido = $archivo !== false
     && str_starts_with($archivo, $base . DIRECTORY_SEPARATOR)   // no salir de www/
     && pathinfo($archivo, PATHINFO_EXTENSION) === 'php'         // solo páginas PHP
-    && !preg_match('#^(sql|inc)([/\\]|$)#', $relativa);        // nunca sql/ ni inc/
+    && !preg_match('#^(sql|inc)(/|$)#', str_replace('\\', '/', $relativa));   // nunca sql/ ni inc/
 
 if (!$permitido) {
     http_response_code(404);
