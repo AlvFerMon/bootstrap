@@ -1,0 +1,8 @@
+# Variables locales (copiar de .env.example)
+.env
+
+# Imágenes subidas desde la aplicación en local
+www/img/subidas/
+
+.vercel
+.DS_Store

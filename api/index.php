@@ -24,7 +24,7 @@ $relativa = $archivo !== false ? substr($archivo, strlen($base) + 1) : '';
 $permitido = $archivo !== false
     && str_starts_with($archivo, $base . DIRECTORY_SEPARATOR)   // no salir de www/
     && pathinfo($archivo, PATHINFO_EXTENSION) === 'php'         // solo páginas PHP
-    && !str_starts_with($relativa, 'sql');                      // nunca la carpeta sql
+    && !preg_match('#^(sql|inc)([/\\]|$)#', $relativa);        // nunca sql/ ni inc/
 
 if (!$permitido) {
     http_response_code(404);

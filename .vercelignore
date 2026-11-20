@@ -5,8 +5,5 @@ Dockerfile
 docker-compose.yml
 conf/
 www/sql/
-*.html
-style.css
-*.pdf
-*.zip
-.claude/
+www/img/subidas/
+README.md
